@@ -184,11 +184,13 @@ roll_results <- roll_results %>%
 roll_results
 ```
 why dont we create a new dataset like we did for the marbles. Like why didnt we do 
-dice<- c(1, 2, 3, 4, 5, 6)
+dice<- c(1, 2, 3, 4, 5, 6) 
 
 
 ```{r summarize_rolls}
-
+roll_results %>%
+  summarise(event_1_prob = mean(event_1),
+            event_2_prob = mean(event_2))
 ```
 
 
