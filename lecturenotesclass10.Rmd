@@ -52,11 +52,11 @@ xtabs(~ Treatment + Improved, data = Arthritis) %>%
 There were 84 patients enrolled in the trial
 
 - What is the probability a randomly selected patient received the placebo?
-43/84 = .5119 --> called marginal probability
+43/84 = 51.2% --> called marginal probability
 
 - What is the probability a randomly selected patient received the placebo
   and had a marked improvement?
-7/84 = .0833 
+7/84 = 8.33%
   
 - What is the probability a randomly selected patient received the placebo
   and the treatment?
@@ -64,7 +64,7 @@ There were 84 patients enrolled in the trial
   
 - What is the probability a randomly selected patient had some improvement or
   was on the treatment?
-48/84 --> .571
+48/84 --> .57.1%
 
 ## Using computer simulations to calculate probabilities
 
@@ -76,16 +76,21 @@ a vector called `marbles`.
 ```{r marbles}
 marbles <- c("red", "red", "white", "red", "blue", "blue", "red", "blue")
 ```
+1 white, 4 red, 3 blue marbles
 
 Suppose we draw a single marble from our imaginary box, where all the marbles
 are equally likely to be selected. What is the probability the marble is blue? 
 How about white?
+
+Blue: 37.5%
+White: 12.5%
 
 We can simulate this "drawing" with the `sample()` function.
 
 ```{r sample}
 sample(marbles, size = 1)
 ```
+sample randomly draws one of the marbles, the size tells you how many "trials"
 
 We produced one random outcome from this experiment. To estimate the probability 
 of say getting a white marble, we need to repeat this experiment many many
@@ -106,6 +111,8 @@ prop.table(counts)
 ```
 
 How close is this value to the "true" probability?
+
+Pretty close, this reflects the "law of large numbers", that when you do a ton of draws, or increase the sample size, it will match closer to the proportion. 
 
 **To summarize our process:**
 
@@ -173,6 +180,8 @@ Write down your guess to the answer before you calculate it.
 ```{r summarize_rolls}
 
 ```
+
+
 
 ## Additional Resources-please look at before Weds.
 
