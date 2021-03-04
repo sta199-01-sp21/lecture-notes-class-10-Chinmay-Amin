@@ -193,7 +193,7 @@ roll_results %>%
             event_2_prob = mean(event_2))
 ```
 
-
+ 
 
 ## Additional Resources-please look at before Weds.
 
